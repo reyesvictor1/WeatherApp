@@ -4,8 +4,20 @@ function createMain() {
     const resultsCard = document.createElement("div");
     resultsCard.classList.add("results-card");
     
+    const locationSection = document.createElement("div");
+    locationSection.classList.add("location-section");
+
+    const weatherSection = document.createElement("div");
+    weatherSection.classList.add("weather-section");
+
+    const additionalSection = document.createElement("div");
+    additionalSection.classList.add("additional-section");
+
     const city = document.createElement("h1");
     city.classList.add("city");
+
+    const regionAndCountry = document.createElement("p");
+    regionAndCountry.classList.add("region-and-country");
 
     const icon = document.createElement("img");
     icon.classList.add("icon");
@@ -22,12 +34,16 @@ function createMain() {
     const wind = document.createElement("p");
     wind.classList.add("wind");
 
-    resultsCard.appendChild(city);
-    resultsCard.appendChild(icon);
-    resultsCard.appendChild(temperature);
-    resultsCard.appendChild(feelsLike);
-    resultsCard.appendChild(humidity);
-    resultsCard.appendChild(wind);
+    locationSection.appendChild(city);
+    locationSection.appendChild(regionAndCountry);
+    weatherSection.appendChild(icon);
+    weatherSection.appendChild(temperature);
+    additionalSection.appendChild(feelsLike);
+    additionalSection.appendChild(humidity);
+    additionalSection.appendChild(wind);
+    resultsCard.appendChild(locationSection);
+    resultsCard.appendChild(weatherSection);
+    resultsCard.appendChild(additionalSection);
 
     main.appendChild(resultsCard);
     resultsCard.style.display = "none";

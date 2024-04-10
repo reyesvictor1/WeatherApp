@@ -23,7 +23,7 @@ function createHeader() {
     const scaleButton = document.createElement("button");
     scaleButton.classList.add("scale-button");
     scaleButton.type = "button";
-    scaleButton.textContent = "°C/°F";
+    scaleButton.textContent = "°C";
 
     header.appendChild(headerLogo);
     header.appendChild(searchBar);
