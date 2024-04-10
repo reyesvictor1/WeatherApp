@@ -61,6 +61,55 @@ footer .github-icon {
 }
 
 .results-card {
+    flex-direction: column;
+    justify-content: flex-start;
     background-color: lightgray;
     width: 70%;
+    height: 100%;
+    padding: 2rem;
+    gap: 1.5rem;
+    border-radius: 5%;
+}
+
+.city {
+    font-size: 3rem;
+}
+
+.region-and-country {
+    font-size: 1rem;
+}
+
+.temperature {
+    font-size: 2rem;
+    min-width: 120px;
+}
+
+.icon {
+    min-height: 6rem;
+}
+
+.weather-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar {
+    width: 50%;
+    display: flex;
+}
+
+.search-input {
+    flex: 3;
+}
+
+.search-button {
+    flex: 1;
+    font-weight: bold;
+}
+
+.scale-button {
+    min-width: 100px;
+    font-weight: bold;
+    font-size: large;
 }
