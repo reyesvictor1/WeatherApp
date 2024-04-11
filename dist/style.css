@@ -31,7 +31,7 @@ header {
 
 main {
     flex: 5;
-    background-color: gold;
+    background-color: slategray;
     padding: 20px;  
     display: flex;
     flex-direction: column;
@@ -64,10 +64,9 @@ footer .github-icon {
     flex-direction: column;
     justify-content: flex-start;
     background-color: lightgray;
-    width: 70%;
-    height: 100%;
-    padding: 2rem;
+    padding: 4rem;
     gap: 1.5rem;
+    min-width: 30%;
     border-radius: 5%;
 }
 
@@ -80,8 +79,8 @@ footer .github-icon {
 }
 
 .temperature {
-    font-size: 2rem;
-    min-width: 120px;
+    font-size: 4rem;
+    min-width: 100px;
 }
 
 .icon {
@@ -94,13 +93,21 @@ footer .github-icon {
     align-items: center;
 }
 
+.header-logo {
+    font-size: x-large;
+}
+
 .search-bar {
-    width: 50%;
+    min-width: 30%;
+    height: 2rem;
     display: flex;
 }
 
 .search-input {
     flex: 3;
+    font-size: large;
+    text-align: start;
+    padding-left: 1rem;
 }
 
 .search-button {
@@ -110,6 +117,7 @@ footer .github-icon {
 
 .scale-button {
     min-width: 100px;
+    height: 2rem;
     font-weight: bold;
     font-size: large;
 }

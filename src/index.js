@@ -7,7 +7,7 @@ loadWebsite();
 
 const API_KEY = "70e3cf7304a74cf9955191438243103";
 const URL = "https://api.weatherapi.com/v1/current.json";
-let responseJSON = [];
+let responseJSON = {};
 let CITY = "";
 let isCelsius = true;
 
@@ -34,10 +34,13 @@ async function fetchData() {
     if (!searchInput.value) return alert("Search input is empty!");
     
     CITY = searchInput.value;
-    const response = await fetch(`${URL}?key=${API_KEY}&q=${CITY}`);
-    responseJSON = await response.json();
-    console.log(responseJSON);
-    populateResultsCard();
+    try {
+        const response = await fetch(`${URL}?key=${API_KEY}&q=${CITY}`);
+        responseJSON = await response.json();
+        populateResultsCard();
+    } catch (error) {
+        alert(responseJSON.error.message);
+    }
 }
 
 function populateResultsCard() {
@@ -63,6 +66,6 @@ function displayTemperature() {
 function toggleScale() {
     isCelsius = !isCelsius;
     scaleButton.textContent = isCelsius ? "°C" : "°F";
-    displayTemperature();
+    if (Object.keys(responseJSON).length) displayTemperature();
 }
 
